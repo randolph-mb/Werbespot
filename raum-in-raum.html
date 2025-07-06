@@ -1,9 +1,10 @@
+
 <!DOCTYPE html>
 <html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IAS | Raum-in-Raum Lösungen entdecken</title>
+    <title>IAS | Raum-in-Raum Lösungen – Ihr privater Rückzugsort</title>
 
     <!-- Google Fonts für ein modernes Schriftbild -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,6 +21,7 @@
             --font-family: 'Poppins', sans-serif;
             --border-radius: 8px;
             --shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            --shadow-hover: 0 8px 25px rgba(0, 0, 0, 0.1);
         }
 
         *, *::before, *::after {
@@ -28,15 +30,20 @@
             padding: 0;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             font-family: var(--font-family);
             background-color: var(--color-background);
             color: var(--color-text);
-            padding-bottom: 120px; /* Platz für den sticky Footer schaffen */
+            line-height: 1.6;
+            padding-bottom: 100px;
         }
 
         .container {
-            max-width: 800px; /* Etwas schmaler für besseren Fokus */
+            max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
         }
@@ -47,6 +54,11 @@
             justify-content: space-between;
             align-items: center;
             padding: 30px 20px;
+            background-color: var(--color-surface);
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 100;
         }
 
         .back-link {
@@ -54,27 +66,115 @@
             color: var(--color-primary);
             text-decoration: none;
             font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: color 0.3s ease;
         }
         .back-link:hover {
-            text-decoration: underline;
+            color: #333;
         }
 
         .logo {
-            font-size: 1.5rem;
+            font-size: 1.8rem;
             font-weight: 600;
             color: var(--color-primary);
+            letter-spacing: 2px;
         }
 
-        /* --- VIDEO-GALERIE --- */
+        /* --- HERO SECTION --- */
+        .hero-section {
+            text-align: center;
+            padding: 60px 20px;
+            background: linear-gradient(135deg, var(--color-surface) 0%, #ffffff 100%);
+        }
+
+        .hero-title {
+            font-size: 2.5rem;
+            font-weight: 600;
+            color: var(--color-primary);
+            margin-bottom: 20px;
+        }
+
+        .hero-subtitle {
+            font-size: 1.2rem;
+            font-weight: 300;
+            color: var(--color-text);
+            max-width: 700px;
+            margin: 0 auto 40px;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .benefit-item {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .benefit-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .benefit-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--color-primary);
+            margin-bottom: 10px;
+        }
+
+        .benefit-text {
+            font-size: 0.9rem;
+            color: var(--color-text);
+        }
+
+        /* --- VIDEO GALERIE --- */
+        .solutions-section {
+            padding: 80px 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.2rem;
+            font-weight: 600;
+            color: var(--color-primary);
+            margin-bottom: 20px;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.1rem;
+            color: var(--color-text);
+            max-width: 600px;
+            margin: 0 auto 60px;
+        }
+
         .video-gallery {
             display: grid;
-            gap: 60px; /* Großer Abstand für Fokus auf ein Video */
+            gap: 60px;
         }
 
         .video-section {
             background-color: var(--color-surface);
             border-radius: var(--border-radius);
             box-shadow: var(--shadow);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .video-section:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .video-container {
+            position: relative;
             overflow: hidden;
         }
 
@@ -83,22 +183,141 @@
             height: auto;
             display: block;
             aspect-ratio: 16 / 9;
-            background-color: #e0e0e0; /* Platzhalterfarbe während Video lädt */
+            background-color: #e0e0e0;
+            transition: transform 0.3s ease;
+        }
+
+        .video-section:hover video {
+            transform: scale(1.02);
+        }
+
+        .video-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, rgba(0,0,0,0.3) 0%, transparent 50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .video-section:hover .video-overlay {
+            opacity: 1;
+        }
+
+        .play-button {
+            background: rgba(255,255,255,0.9);
+            border: none;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: var(--color-primary);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .play-button:hover {
+            background: white;
+            transform: scale(1.1);
         }
 
         .video-description {
-            padding: 25px;
+            padding: 30px;
         }
+
         .video-description h2 {
             font-size: 1.8rem;
-            margin-bottom: 10px;
+            color: var(--color-primary);
+            margin-bottom: 15px;
         }
+
         .video-description p {
             font-size: 1rem;
             line-height: 1.6;
+            margin-bottom: 20px;
         }
 
-        /* --- STICKY CALL-TO-ACTION BAR --- */
+        .feature-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .feature-list li {
+            font-size: 0.9rem;
+            color: var(--color-text);
+            margin-bottom: 8px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .feature-list li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #28a745;
+            font-weight: 600;
+        }
+
+        /* --- PROCESS SECTION --- */
+        .process-section {
+            background-color: var(--color-surface);
+            padding: 80px 20px;
+        }
+
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
+        }
+
+        .process-step {
+            text-align: center;
+            padding: 30px 20px;
+            background: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease;
+        }
+
+        .process-step:hover {
+            transform: translateY(-5px);
+        }
+
+        .step-number {
+            background: var(--color-primary);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin: 0 auto 20px;
+        }
+
+        .step-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--color-primary);
+            margin-bottom: 15px;
+        }
+
+        .step-description {
+            color: var(--color-text);
+        }
+
+        /* --- STICKY CTA BAR --- */
         .sticky-cta-bar {
             position: fixed;
             bottom: 0;
@@ -110,7 +329,7 @@
             border-top: 1px solid #e9ecef;
             padding: 15px 20px;
             display: flex;
-            justify-content: space-around;
+            justify-content: center;
             align-items: center;
             gap: 15px;
             z-index: 1000;
@@ -118,8 +337,7 @@
         }
 
         .cta-button {
-            flex-grow: 1;
-            padding: 12px 15px;
+            padding: 12px 24px;
             font-size: 1rem;
             font-weight: 600;
             text-align: center;
@@ -127,15 +345,17 @@
             border-radius: 5px;
             transition: all 0.3s ease;
             cursor: pointer;
+            border: none;
         }
 
         .cta-button.primary {
             background-color: var(--color-primary);
             color: var(--color-background);
-            border: 1px solid var(--color-primary);
+            margin-right: 10px;
         }
         .cta-button.primary:hover {
             background-color: #333;
+            transform: translateY(-2px);
         }
 
         .cta-button.secondary {
@@ -147,86 +367,264 @@
             background-color: var(--color-surface);
             border-color: var(--color-primary);
         }
+
+        /* --- MODAL STYLES --- */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.85);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 2000;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .modal-overlay.active {
+            display: flex;
+            opacity: 1;
+        }
+
+        .modal-content {
+            position: relative;
+            background-color: var(--color-background);
+            width: 90%;
+            max-width: 900px;
+            max-height: 90vh;
+            padding: 20px;
+            border-radius: var(--border-radius);
+        }
+
+        .modal-close-button {
+            position: absolute;
+            top: -35px;
+            right: 0;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 2rem;
+            cursor: pointer;
+            line-height: 1;
+        }
+
+        .modal-body video {
+            width: 100%;
+            height: auto;
+            aspect-ratio: 16 / 9;
+            border-radius: var(--border-radius);
+        }
+
+        /* --- RESPONSIVE DESIGN --- */
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1rem;
+            }
+            
+            .sticky-cta-bar {
+                flex-direction: column;
+                gap: 10px;
+                padding: 12px 15px;
+            }
+            
+            .cta-button {
+                width: 100%;
+                max-width: 300px;
+            }
+
+            .benefits-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+        }
     </style>
 </head>
 <body>
 
-    <header class="page-header container">
+    <!-- HEADER -->
+    <header class="page-header">
         <a href="index.html" class="back-link">← Zurück zur Übersicht</a>
         <div class="logo">IAS</div>
     </header>
 
-    <main class="container">
-        <div class="video-gallery">
-            <!-- VIDEO 1: Homeoffice -->
-            <section class="video-section">
-                <!-- WICHTIG: Ersetzen Sie data-src mit Ihrem Video-Pfad -->
-                <video class="scroll-video" muted loop playsinline data-src="https://assets.mixkit.co/videos/preview/mixkit-modern-glass-and-wood-house-in-the-forest-5489-large.mp4"></video>
-                <div class="video-description">
-                    <h2>Fokus im Homeoffice</h2>
-                    <p>Schaffen Sie eine professionelle und ruhige Arbeitsumgebung in Ihrem Zuhause, ohne sich komplett abzugrenzen.</p>
-                </div>
-            </section>
+    <!-- HERO SECTION -->
+    <section class="hero-section container">
+        <h1 class="hero-title">Raum-in-Raum Lösungen</h1>
+        <p class="hero-subtitle">Schaffen Sie flexible, gläserne Rückzugsorte für Homeoffice, Meetings oder Fokusarbeit – ohne Ihre Räume zu zerteilen.</p>
+        
+        <div class="benefits-grid">
+            <div class="benefit-item">
+                <span class="benefit-icon">🏢</span>
+                <h3 class="benefit-title">Flexibel</h3>
+                <p class="benefit-text">Anpassbar an jeden Raum und Bedarf</p>
+            </div>
+            <div class="benefit-item">
+                <span class="benefit-icon">🔇</span>
+                <h3 class="benefit-title">Akustisch optimiert</h3>
+                <p class="benefit-text">Effektiver Schallschutz für konzentriertes Arbeiten</p>
+            </div>
+            <div class="benefit-item">
+                <span class="benefit-icon">✨</span>
+                <h3 class="benefit-title">Design-Integration</h3>
+                <p class="benefit-text">Nahtlose Eingliederung in bestehende Räume</p>
+            </div>
+            <div class="benefit-item">
+                <span class="benefit-icon">🌱</span>
+                <h3 class="benefit-title">Nachhaltig</h3>
+                <p class="benefit-text">Langlebige Materialien und zeitloses Design</p>
+            </div>
+        </div>
+    </section>
 
-            <!-- VIDEO 2: Meeting Box -->
-            <section class="video-section">
-                <!-- WICHTIG: Ersetzen Sie data-src mit Ihrem Video-Pfad -->
-                <video class="scroll-video" muted loop playsinline data-src="https://assets.mixkit.co/videos/preview/mixkit-sliding-glass-door-of-a-modern-house-5487-large.mp4"></video>
+    <!-- LÖSUNGEN SECTION -->
+    <section class="solutions-section container">
+        <h2 class="section-title">Unsere Raum-in-Raum Lösungen</h2>
+        <p class="section-subtitle">Entdecken Sie verschiedene Konzepte für Ihre individuellen Anforderungen</p>
+
+        <div class="video-gallery">
+            <!-- LÖSUNG 1: Homeoffice -->
+            <article class="video-section">
+                <div class="video-container">
+                    <video class="scroll-video" muted loop playsinline data-src="https://assets.mixkit.co/videos/preview/mixkit-modern-glass-and-wood-house-in-the-forest-5489-large.mp4"></video>
+                    <div class="video-overlay">
+                        <button class="play-button" onclick="openVideoModal('https://assets.mixkit.co/videos/preview/mixkit-modern-glass-and-wood-house-in-the-forest-5489-large.mp4')">▶</button>
+                    </div>
+                </div>
+                <div class="video-description">
+                    <h2>Das Homeoffice-Refugium</h2>
+                    <p>Schaffen Sie eine professionelle und ruhige Arbeitsumgebung in Ihrem Zuhause, ohne sich komplett abzugrenzen. Perfekt für Videokonferenzen und konzentriertes Arbeiten.</p>
+                    <ul class="feature-list">
+                        <li>Optimierte Akustik für Videokonferenzen</li>
+                        <li>Integrierte Beleuchtung und Belüftung</li>
+                        <li>Flexible Größen von 4-12 m²</li>
+                        <li>Optional mit Schiebetüren</li>
+                    </ul>
+                </div>
+            </article>
+
+            <!-- LÖSUNG 2: Meeting Box -->
+            <article class="video-section">
+                <div class="video-container">
+                    <video class="scroll-video" muted loop playsinline data-src="https://assets.mixkit.co/videos/preview/mixkit-sliding-glass-door-of-a-modern-house-5487-large.mp4"></video>
+                    <div class="video-overlay">
+                        <button class="play-button" onclick="openVideoModal('https://assets.mixkit.co/videos/preview/mixkit-sliding-glass-door-of-a-modern-house-5487-large.mp4')">▶</button>
+                    </div>
+                </div>
                 <div class="video-description">
                     <h2>Die Meeting-Box</h2>
-                    <p>Ideal für diskrete Besprechungen oder Telefonate im offenen Großraumbüro. Akustisch optimiert, visuell integriert.</p>
+                    <p>Ideal für diskrete Besprechungen oder Telefonate im offenen Großraumbüro. Akustisch optimiert, visuell integriert und schnell verfügbar.</p>
+                    <ul class="feature-list">
+                        <li>Schalldämmung bis zu 35 dB</li>
+                        <li>Buchbares System möglich</li>
+                        <li>Für 2-6 Personen ausgelegt</li>
+                        <li>Integrierte Technik-Ausstattung</li>
+                    </ul>
                 </div>
-            </section>
+            </article>
 
-            <!-- VIDEO 3: Kreativ-Raum -->
-            <section class="video-section">
-                <!-- WICHTIG: Ersetzen Sie data-src mit Ihrem Video-Pfad -->
-                <video class="scroll-video" muted loop playsinline data-src="https://assets.mixkit.co/videos/preview/mixkit-modern-house-with-a-swimming-pool-5483-large.mp4"></video>
+            <!-- LÖSUNG 3: Kreativ-Raum -->
+            <article class="video-section">
+                <div class="video-container">
+                    <video class="scroll-video" muted loop playsinline data-src="https://assets.mixkit.co/videos/preview/mixkit-modern-house-with-a-swimming-pool-5483-large.mp4"></video>
+                    <div class="video-overlay">
+                        <button class="play-button" onclick="openVideoModal('https://assets.mixkit.co/videos/preview/mixkit-modern-house-with-a-swimming-pool-5483-large.mp4')">▶</button>
+                    </div>
+                </div>
                 <div class="video-description">
                     <h2>Der Kreativ-Raum</h2>
-                    <p>Ein transparenter Raum, der Teamarbeit fördert und gleichzeitig als visueller und akustischer Puffer dient.</p>
+                    <p>Ein transparenter Raum, der Teamarbeit fördert und gleichzeitig als visueller und akustischer Puffer dient. Ideal für Brainstorming und kreative Prozesse.</p>
+                    <ul class="feature-list">
+                        <li>Beschreibbare Glasflächen</li>
+                        <li>Flexibles Mobiliar</li>
+                        <li>Optimale Lichtverhältnisse</li>
+                        <li>Modulares Raumkonzept</li>
+                    </ul>
                 </div>
-            </section>
+            </article>
         </div>
-    </main>
+    </section>
 
+    <!-- PROCESS SECTION -->
+    <section class="process-section">
+        <div class="container">
+            <h2 class="section-title">Ihr Weg zur perfekten Lösung</h2>
+            <p class="section-subtitle">Von der ersten Idee bis zur fertigen Installation begleiten wir Sie professionell</p>
+            
+            <div class="process-grid">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <h3 class="step-title">Beratung & Planung</h3>
+                    <p class="step-description">Gemeinsame Analyse Ihrer Räume und Bedürfnisse vor Ort oder per Videocall</p>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <h3 class="step-title">3D-Visualisierung</h3>
+                    <p class="step-description">Detaillierte 3D-Planung damit Sie Ihre neue Lösung schon vor dem Bau erleben können</p>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <h3 class="step-title">Maßfertigung</h3>
+                    <p class="step-description">Präzise Fertigung in unserer Werkstatt mit hochwertigen Materialien</p>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <h3 class="step-title">Installation</h3>
+                    <p class="step-description">Professionelle Montage durch unser erfahrenes Team – meist in nur einem Tag</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- STICKY CTA BAR -->
     <footer class="sticky-cta-bar">
-        <!-- WICHTIG: Passen Sie die Links an -->
-        <a href="mailto:beratung@ias-glas.de?subject=Beratungsanfrage%20für%20Raum-in-Raum%20Lösung" class="cta-button primary">Beratung anfordern</a>
-        <a href="/link-zu-ihren-3d-modellen.html" class="cta-button secondary">3D-Modelle entdecken</a>
+        <a href="mailto:beratung@ias-glas.de?subject=Beratungsanfrage%20für%20Raum-in-Raum%20Lösung" class="cta-button primary">Kostenlose Beratung anfragen</a>
+        <a href="#" class="cta-button secondary" onclick="alert('3D-Galerie öffnet in Kürze')">3D-Modelle entdecken</a>
     </footer>
+
+    <!-- VIDEO MODAL -->
+    <div id="video-modal" class="modal-overlay">
+        <div class="modal-content">
+            <button class="modal-close-button" onclick="closeVideoModal()">×</button>
+            <div class="modal-body">
+                <video id="modal-video" controls muted></video>
+            </div>
+        </div>
+    </div>
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             // Lazy Loading und Autoplay für Videos beim Scrollen
-            // Verwendet die moderne und performante Intersection Observer API
-
             const videos = document.querySelectorAll('.scroll-video');
 
             const observerOptions = {
-                root: null, // Beobachtet im Verhältnis zum Viewport
+                root: null,
                 rootMargin: '0px',
-                threshold: 0.6 // Video muss zu 60% sichtbar sein, um zu starten
+                threshold: 0.6
             };
 
             const videoObserver = new IntersectionObserver((entries, observer) => {
                 entries.forEach(entry => {
                     const video = entry.target;
 
-                    // Lazy load der Videoquelle
                     if (video.dataset.src && !video.src) {
                         video.src = video.dataset.src;
                     }
 
                     if (entry.isIntersecting) {
-                        // Video ist im sichtbaren Bereich -> Abspielen
                         video.play().catch(error => {
-                            // Autoplay kann blockiert werden, wenn die Seite nicht aktiv ist.
-                            // Das ist ok, der Nutzer wird es bei Interaktion sehen.
                             console.log("Autoplay wurde vom Browser verhindert:", error);
                         });
                     } else {
-                        // Video ist nicht mehr sichtbar -> Pausieren
                         video.pause();
                     }
                 });
@@ -234,6 +632,53 @@
 
             videos.forEach(video => {
                 videoObserver.observe(video);
+            });
+        });
+
+        // Modal Funktionen
+        function openVideoModal(videoSrc) {
+            const modal = document.getElementById('video-modal');
+            const video = document.getElementById('modal-video');
+            
+            video.src = videoSrc;
+            modal.classList.add('active');
+            video.play();
+        }
+
+        function closeVideoModal() {
+            const modal = document.getElementById('video-modal');
+            const video = document.getElementById('modal-video');
+            
+            modal.classList.remove('active');
+            video.pause();
+            video.src = '';
+        }
+
+        // Modal schließen bei Hintergrund-Klick
+        document.getElementById('video-modal').addEventListener('click', (e) => {
+            if (e.target.id === 'video-modal') {
+                closeVideoModal();
+            }
+        });
+
+        // Modal schließen bei ESC-Taste
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                closeVideoModal();
+            }
+        });
+
+        // Smooth Scroll für interne Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
             });
         });
     </script>
