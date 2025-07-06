@@ -1,0 +1,52 @@
+Genial – du gehst jetzt eine Ebene tiefer und baust gezielt visuelle Assets, die du zu echten 3D
+Modellen weiterverarbeitest. 
+Das heißt: Du brauchst jetzt nicht ganze Räume oder Türen, sondern präzise Einzelteile – 
+sogenannte Design-Elemente, die du im 3D-Editor zusammensetzen oder animieren kannst. 
+Was du jetzt brauchst: 
+Einzelne Elemente, die sich klar und isoliert darstellen lassen, z. B.: 
+1. Türrahmen (Stahlrahmen in verschiedenen Geometrien) 
+2. Glasarten (klar, satiniert, strukturiert, getönt) 
+3. Türgriffe (minimalistisch, kantig, rund, eingelassen) 
+4. Schienensysteme (für Schiebetür oben oder unten) 
+5. Türprofile (Schnittansicht seitlich – Material + Aufbau) 
+6. Scharniere oder Pivot-Achsen 
+7. Deckeneinbauelemente oder Bodenführungen 
+8. Beschläge, Dämpfer, Softclose-Mechanik-Visual 
+9. Verbindungselemente (z. B. T-Verbindungen für Glas-Stahl-Übergang) 
+Strategie für die 3D-Vorbereitung: 
+Du erzeugst klar freigestellte Bilder dieser Bauteile, die sich einfach in Blender, SketchUp, Figma, 
+Spline oder Vectary nachbauen oder direkt als 3D-Referenz extrahieren lassen. 
+Beispiel-Prompts für Midjourney, Leonardo oder DALL·E (für 3D-Referenzbilder) 
+1. Schwarzer Stahlrahmen (Loft-Style) – frontale Einzelansicht 
+“Black steel door frame, rectangular, modern industrial design, clean black matte finish, isolated on 
+white background, front view, photorealistic, no surrounding elements, suitable for 3D modeling.” 
+2. Satiniertes ESG-Glas – Musterfläche, weich milchig 
+“Single glass panel with satin frosted finish, slightly translucent, soft light diffusion effect, isolated on 
+transparent or white background, high-detail texture, clean edges, 3D render style.” 
+3. Türgriff (Minimalstil, schwarz) 
+“Modern minimalist black door handle, rectangular form, steel finish, freestanding object, centered 
+on white background, side view, no reflections, high-resolution for modeling.” 
+4. Obere Laufschiene für Schiebetür 
+“Sliding door top rail system, black steel track with roller mechanism, technical design, isolated view 
+on white background, side perspective, product render style, clean and precise.” 
+5. Pivot-Hinge System (Drehtürmechanik) 
+“Pivot door hinge mechanism, black steel and chrome components, close-up isolated on white, 
+engineering style, high detail, suitable for architectural modeling.” 
+6. Bodenführung für Schiebetür (U-Profil) 
+“Bottom guide rail for sliding glass door, minimal U-profile in matte black metal, viewed from top and 
+side, isolated on white background, clean architectural component.” 
+7. Glaskante – Schnittansicht (Kantenpolitur + Dicke) 
+“Close-up of a polished glass edge, 8mm thick, clear and reflective, shown in cross-section, with 
+layered material view, isolated on white background, high detail.” 
+8. Strukturglas – Gussglas mit Relief 
+“Textured cast glass sample, with linear relief pattern, semi-transparent, 3D-rendered sample tile, 
+centered on white, clean lighting, high-fidelity material preview.” 
+Empfehlung für deine Organisation: 
+• Erstelle je ein Bild pro Element 
+• Behalte die Perspektive konsistent (z. B. front, side, isometric) 
+• Benenne sie sinnvoll → Pivot_Hinge_Front.png, Glass_Satin_Side.png, usw. 
+• Dann kannst du in Blender oder Figma die Referenzen exakt nachbauen oder als Blueprint 
+einfügen 
+Möchtest du, dass ich dir auch die genauen Formate oder Templates für Vectary / Blender gebe, in 
+die du das reinladen kannst? 
+Oder brauchst du danach Hilfe bei der Struktur für die 3D-Animationsszene? 
