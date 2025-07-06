@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IAS | Raum-in-Raum Lösungen entdecken</title>
+
+    <!-- Google Fonts für ein modernes Schriftbild -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --color-background: #ffffff;
+            --color-surface: #f8f9fa;
+            --color-primary: #1a1a1a;
+            --color-text: #333333;
+            --color-accent: #000000;
+            --font-family: 'Poppins', sans-serif;
+            --border-radius: 8px;
+            --shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--font-family);
+            background-color: var(--color-background);
+            color: var(--color-text);
+            padding-bottom: 120px; /* Platz für den sticky Footer schaffen */
+        }
+
+        .container {
+            max-width: 800px; /* Etwas schmaler für besseren Fokus */
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* --- HEADER --- */
+        .page-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 30px 20px;
+        }
+
+        .back-link {
+            font-size: 1rem;
+            color: var(--color-primary);
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--color-primary);
+        }
+
+        /* --- VIDEO-GALERIE --- */
+        .video-gallery {
+            display: grid;
+            gap: 60px; /* Großer Abstand für Fokus auf ein Video */
+        }
+
+        .video-section {
+            background-color: var(--color-surface);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            overflow: hidden;
+        }
+
+        .video-section video {
+            width: 100%;
+            height: auto;
+            display: block;
+            aspect-ratio: 16 / 9;
+            background-color: #e0e0e0; /* Platzhalterfarbe während Video lädt */
+        }
+
+        .video-description {
+            padding: 25px;
+        }
+        .video-description h2 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+        .video-description p {
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        /* --- STICKY CALL-TO-ACTION BAR --- */
+        .sticky-cta-bar {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-top: 1px solid #e9ecef;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            gap: 15px;
+            z-index: 1000;
+            box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .cta-button {
+            flex-grow: 1;
+            padding: 12px 15px;
+            font-size: 1rem;
+            font-weight: 600;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .cta-button.primary {
+            background-color: var(--color-primary);
+            color: var(--color-background);
+            border: 1px solid var(--color-primary);
+        }
+        .cta-button.primary:hover {
+            background-color: #333;
+        }
+
+        .cta-button.secondary {
+            background-color: transparent;
+            color: var(--color-primary);
+            border: 1px solid #ccc;
+        }
+        .cta-button.secondary:hover {
+            background-color: var(--color-surface);
+            border-color: var(--color-primary);
+        }
+    </style>
+</head>
+<body>
+
+    <header class="page-header container">
+        <a href="index.html" class="back-link">← Zurück zur Übersicht</a>
+        <div class="logo">IAS</div>
+    </header>
+
+    <main class="container">
+        <div class="video-gallery">
+            <!-- VIDEO 1: Homeoffice -->
+            <section class="video-section">
+                <!-- WICHTIG: Ersetzen Sie data-src mit Ihrem Video-Pfad -->
+                <video class="scroll-video" muted loop playsinline data-src="https://assets.mixkit.co/videos/preview/mixkit-modern-glass-and-wood-house-in-the-forest-5489-large.mp4"></video>
+                <div class="video-description">
+                    <h2>Fokus im Homeoffice</h2>
+                    <p>Schaffen Sie eine professionelle und ruhige Arbeitsumgebung in Ihrem Zuhause, ohne sich komplett abzugrenzen.</p>
+                </div>
+            </section>
+
+            <!-- VIDEO 2: Meeting Box -->
+            <section class="video-section">
+                <!-- WICHTIG: Ersetzen Sie data-src mit Ihrem Video-Pfad -->
+                <video class="scroll-video" muted loop playsinline data-src="https://assets.mixkit.co/videos/preview/mixkit-sliding-glass-door-of-a-modern-house-5487-large.mp4"></video>
+                <div class="video-description">
+                    <h2>Die Meeting-Box</h2>
+                    <p>Ideal für diskrete Besprechungen oder Telefonate im offenen Großraumbüro. Akustisch optimiert, visuell integriert.</p>
+                </div>
+            </section>
+
+            <!-- VIDEO 3: Kreativ-Raum -->
+            <section class="video-section">
+                <!-- WICHTIG: Ersetzen Sie data-src mit Ihrem Video-Pfad -->
+                <video class="scroll-video" muted loop playsinline data-src="https://assets.mixkit.co/videos/preview/mixkit-modern-house-with-a-swimming-pool-5483-large.mp4"></video>
+                <div class="video-description">
+                    <h2>Der Kreativ-Raum</h2>
+                    <p>Ein transparenter Raum, der Teamarbeit fördert und gleichzeitig als visueller und akustischer Puffer dient.</p>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="sticky-cta-bar">
+        <!-- WICHTIG: Passen Sie die Links an -->
+        <a href="mailto:beratung@ias-glas.de?subject=Beratungsanfrage%20für%20Raum-in-Raum%20Lösung" class="cta-button primary">Beratung anfordern</a>
+        <a href="/link-zu-ihren-3d-modellen.html" class="cta-button secondary">3D-Modelle entdecken</a>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Lazy Loading und Autoplay für Videos beim Scrollen
+            // Verwendet die moderne und performante Intersection Observer API
+
+            const videos = document.querySelectorAll('.scroll-video');
+
+            const observerOptions = {
+                root: null, // Beobachtet im Verhältnis zum Viewport
+                rootMargin: '0px',
+                threshold: 0.6 // Video muss zu 60% sichtbar sein, um zu starten
+            };
+
+            const videoObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    const video = entry.target;
+
+                    // Lazy load der Videoquelle
+                    if (video.dataset.src && !video.src) {
+                        video.src = video.dataset.src;
+                    }
+
+                    if (entry.isIntersecting) {
+                        // Video ist im sichtbaren Bereich -> Abspielen
+                        video.play().catch(error => {
+                            // Autoplay kann blockiert werden, wenn die Seite nicht aktiv ist.
+                            // Das ist ok, der Nutzer wird es bei Interaktion sehen.
+                            console.log("Autoplay wurde vom Browser verhindert:", error);
+                        });
+                    } else {
+                        // Video ist nicht mehr sichtbar -> Pausieren
+                        video.pause();
+                    }
+                });
+            }, observerOptions);
+
+            videos.forEach(video => {
+                videoObserver.observe(video);
+            });
+        });
+    </script>
+
+</body>
+</html>
