@@ -10,6 +10,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <!-- Model Viewer für 3D-GLB Dateien -->
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 
     <style>
         :root {
@@ -164,6 +167,13 @@
             justify-content: center;
             position: relative;
             cursor: pointer;
+            overflow: hidden;
+            border-radius: var(--border-radius) var(--border-radius) 0 0;
+        }
+
+        model-viewer {
+            background-color: transparent;
+            --poster-color: transparent;
         }
 
         .model-placeholder {
@@ -486,11 +496,17 @@
 
             <!-- MODELL 3: Minimalistischer Türgriff -->
             <article class="model-card" data-category="griffe">
-                <div class="model-viewer" onclick="alert('3D-Viewer öffnet in Kürze - Türgriff')">
-                    <div class="model-placeholder">
-                        <span class="model-icon">🔧</span>
-                        <span class="model-status">3D-Modell laden</span>
-                    </div>
+                <div class="model-viewer">
+                    <model-viewer 
+                        src="attached_assets/Modern_Minimalist_Han_0706094030_texture_1751794999812.glb"
+                        alt="Minimalistischer schwarzer Türgriff"
+                        auto-rotate 
+                        camera-controls 
+                        shadow-intensity="1"
+                        style="width: 100%; height: 100%;"
+                        loading="eager"
+                        reveal="auto">
+                    </model-viewer>
                 </div>
                 <div class="model-info">
                     <h3 class="model-title">Minimalistischer Türgriff</h3>
@@ -502,8 +518,8 @@
                         <li>Befestigung unsichtbar</li>
                     </ul>
                     <div class="model-actions">
-                        <button class="model-button primary">Interaktiv testen</button>
-                        <button class="model-button secondary">Montage anzeigen</button>
+                        <button class="model-button primary" onclick="document.querySelector('model-viewer').cameraOrbit = '0deg 75deg 2m'">Nahansicht</button>
+                        <button class="model-button secondary" onclick="document.querySelector('model-viewer').cameraOrbit = '45deg 55deg 4m'">Übersicht</button>
                     </div>
                 </div>
             </article>
