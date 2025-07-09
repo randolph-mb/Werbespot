@@ -42,13 +42,16 @@ document.addEventListener('DOMContentLoaded', function() {
         modalBody.innerHTML = '';
     };
 
-    // Event Listeners für die CTA-Buttons
+    // Event Listeners nur für Video-Buttons (nicht für Navigation-Links)
     ctaButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            const type = button.dataset.type;
-            const src = button.dataset.src;
-            openModal(type, src);
-        });
+        // Nur für button-Elemente mit data-type="video" das Modal öffnen
+        if (button.tagName === 'BUTTON' && button.dataset.type === 'video') {
+            button.addEventListener('click', () => {
+                const type = button.dataset.type;
+                const src = button.dataset.src;
+                openModal(type, src);
+            });
+        }
     });
 
     // Event Listeners zum Schließen
