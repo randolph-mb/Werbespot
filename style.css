@@ -18,7 +18,7 @@
 }
 
 html {
-    scroll-behavior: smooth;
+    scroll-behavior: auto;
     height: 100%;
     width: 100%;
 }
@@ -85,7 +85,6 @@ body {
     border-radius: var(--border-radius);
     overflow: hidden;
     box-shadow: var(--shadow);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
     display: flex;
     flex-direction: column;
 }
