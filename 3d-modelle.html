@@ -68,26 +68,35 @@
                 </div>
             </article>
 
-            <!-- MODELL 2: Satiniertes ESG-Glas -->
-            <article class="model-card" data-category="glas">
-                <div class="model-viewer" onclick="alert('3D-Viewer öffnet in Kürze - Satiniertes Glas')">
-                    <div class="model-placeholder">
-                        <span class="model-icon">⬜</span>
-                        <span class="model-status">3D-Modell laden</span>
-                    </div>
+            <!-- MODELL 2: Minimalistischer Griff -->
+            <article class="model-card" data-category="griffe">
+                <div class="model-viewer">
+                    <model-viewer 
+                        src="attached_assets/Minimalistischer Griff.glb"
+                        alt="Minimalistischer schwarzer Türgriff"
+                        auto-rotate 
+                        camera-controls 
+                        shadow-intensity="1"
+                        style="width: 100%; height: 100%;"
+                        loading="eager"
+                        reveal="auto">
+                    </model-viewer>
                 </div>
                 <div class="model-info">
-                    <h3 class="model-title">Satiniertes ESG-Glas</h3>
-                    <p class="model-description">Hochwertiges Einscheibensicherheitsglas mit satinierter Oberfläche für optimalen Sichtschutz.</p>
+                    <h3 class="model-title">Minimalistisches Schiebesystem mit verdeckter Deckenschiene</h3>
+                    <p class="model-description">
+                        Zwei Flügel – maximales Design: Dieses Glas-Schiebesystem überzeugt durch seine nahezu unsichtbare Laufschiene in der Decke und ermöglicht einen lautlosen, eleganten Übergang zwischen zwei Räumen.
+                    </p>
                     <ul class="model-specs">
-                        <li>ESG-Qualität nach DIN EN 12150</li>
-                        <li>Stärke: 8mm oder 10mm</li>
-                        <li>Lichtdurchlässigkeit: 85%</li>
-                        <li>Polierte Kanten</li>
+                        <li>Flügelanzahl: 2</li>
+                        <li>Verdeckte Deckenschiene für nahtlose Integration</li>
+                        <li>Sanfte, geräuscharme Bewegung</li>
+                        <li>Optional mit Soft-Close-Technologie</li>
                     </ul>
+
                     <div class="model-actions">
-                        <button class="model-button primary">Material erkunden</button>
-                        <button class="model-button secondary">Lichteffekte</button>
+                        <button class="model-button primary" onclick="document.querySelector('model-viewer').cameraOrbit = '0deg 75deg 2m'">Nahansicht</button>
+                        <button class="model-button secondary" onclick="document.querySelector('model-viewer').cameraOrbit = '45deg 55deg 4m'">Übersicht</button>
                     </div>
                 </div>
             </article>
@@ -115,6 +124,39 @@
                         <li>Ergonomische Griffmulde</li>
                         <li>Befestigung unsichtbar</li>
                     </ul>
+                    <div class="model-actions">
+                        <button class="model-button primary" onclick="document.querySelector('model-viewer').cameraOrbit = '0deg 75deg 2m'">Nahansicht</button>
+                        <button class="model-button secondary" onclick="document.querySelector('model-viewer').cameraOrbit = '45deg 55deg 4m'">Übersicht</button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- MODELL 3.1: integrierter Griff im türrahmen -->
+            <article class="model-card" data-category="griffe">
+                <div class="model-viewer">
+                    <model-viewer 
+                        src="attached_assets/integrierter Griff im Türrahmen.glb"
+                        alt="Minimalistischer schwarzer Türgriff"
+                        auto-rotate 
+                        camera-controls 
+                        shadow-intensity="1"
+                        style="width: 100%; height: 100%;"
+                        loading="eager"
+                        reveal="auto">
+                    </model-viewer>
+                </div>
+                <div class="model-info">
+                    <h3 class="model-title">Minimalistisches Schiebesystem mit verdeckter Deckenschiene</h3>
+                    <p class="model-description">
+                        Zwei Flügel – maximales Design: Dieses Glas-Schiebesystem überzeugt durch seine nahezu unsichtbare Laufschiene in der Decke und ermöglicht einen lautlosen, eleganten Übergang zwischen zwei Räumen.
+                    </p>
+                    <ul class="model-specs">
+                        <li>Flügelanzahl: 2</li>
+                        <li>Verdeckte Deckenschiene für nahtlose Integration</li>
+                        <li>Sanfte, geräuscharme Bewegung</li>
+                        <li>Optional mit Soft-Close-Technologie</li>
+                    </ul>
+
                     <div class="model-actions">
                         <button class="model-button primary" onclick="document.querySelector('model-viewer').cameraOrbit = '0deg 75deg 2m'">Nahansicht</button>
                         <button class="model-button secondary" onclick="document.querySelector('model-viewer').cameraOrbit = '45deg 55deg 4m'">Übersicht</button>
