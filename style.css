@@ -561,9 +561,16 @@ body {
 
 .models-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    max-width: 1000px;
+    margin: 40px auto 0;
     gap: 40px;
-    margin-top: 40px;
+}
+
+@media (min-width: 1200px) {
+    .models-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 .model-card {
