@@ -1,37 +1,5 @@
 
-// FOUC Prevention - Show page when CSS is loaded
-function showPageWhenReady() {
-    // Check if CSS is loaded by testing a style property
-    const testElement = document.createElement('div');
-    testElement.style.position = 'absolute';
-    testElement.style.visibility = 'hidden';
-    testElement.className = 'category-card'; // Use a class that should be styled
-    document.body.appendChild(testElement);
-    
-    const computedStyle = window.getComputedStyle(testElement);
-    const hasStyles = computedStyle.boxShadow !== 'none' || computedStyle.borderRadius !== '0px';
-    
-    document.body.removeChild(testElement);
-    
-    if (hasStyles) {
-        document.body.classList.add('loaded');
-    } else {
-        // Retry after a short delay if styles aren't loaded yet
-        setTimeout(showPageWhenReady, 10);
-    }
-}
-
-// Start the check immediately
-showPageWhenReady();
-
 document.addEventListener('DOMContentLoaded', function() {
-    // Ensure page is shown even if CSS check fails
-    setTimeout(() => {
-        if (!document.body.classList.contains('loaded')) {
-            document.body.classList.add('loaded');
-        }
-    }, 100);
-
     const modal = document.getElementById('media-modal');
     const modalBody = document.getElementById('modal-body');
     const closeModalButton = document.getElementById('modal-close');

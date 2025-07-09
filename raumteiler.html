@@ -168,35 +168,7 @@
     </footer>
 
     <script>
-        // FOUC Prevention - Show page when CSS is loaded
-        function showPageWhenReady() {
-            const testElement = document.createElement('div');
-            testElement.style.position = 'absolute';
-            testElement.style.visibility = 'hidden';
-            testElement.className = 'video-section';
-            document.body.appendChild(testElement);
-            
-            const computedStyle = window.getComputedStyle(testElement);
-            const hasStyles = computedStyle.boxShadow !== 'none' || computedStyle.borderRadius !== '0px';
-            
-            document.body.removeChild(testElement);
-            
-            if (hasStyles) {
-                document.body.classList.add('loaded');
-            } else {
-                setTimeout(showPageWhenReady, 10);
-            }
-        }
-
-        showPageWhenReady();
-
         document.addEventListener('DOMContentLoaded', () => {
-            // Fallback to show page after 100ms
-            setTimeout(() => {
-                if (!document.body.classList.contains('loaded')) {
-                    document.body.classList.add('loaded');
-                }
-            }, 100);
             // Autoplay für Videos beim Scrollen
             const videos = document.querySelectorAll('.scroll-video');
 
