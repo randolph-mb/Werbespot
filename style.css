@@ -28,8 +28,6 @@ body {
     background-color: var(--color-background);
     color: var(--color-text);
     line-height: 1.6;
-    visibility: visible !important;
-    opacity: 1 !important;
 }
 
 /* --- LAYOUT & CONTAINER --- */
