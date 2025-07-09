@@ -1,0 +1,595 @@
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IAS | Raumteiler – Stilvolle Zonierung mit Glas und Stahl</title>
+
+    <!-- Google Fonts für ein modernes Schriftbild -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --color-background: #ffffff;
+            --color-surface: #f8f9fa;
+            --color-primary: #1a1a1a;
+            --color-text: #333333;
+            --color-accent: #000000;
+            --font-family: 'Poppins', sans-serif;
+            --border-radius: 8px;
+            --shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            --shadow-hover: 0 8px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-family);
+            background-color: var(--color-background);
+            color: var(--color-text);
+            line-height: 1.6;
+            padding-bottom: 100px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* --- HEADER --- */
+        .page-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 30px 20px;
+            background-color: var(--color-surface);
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .back-link {
+            font-size: 1rem;
+            color: var(--color-primary);
+            text-decoration: none;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: color 0.3s ease;
+        }
+        .back-link:hover {
+            color: #333;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: var(--color-primary);
+            letter-spacing: 2px;
+        }
+
+        /* --- HERO SECTION --- */
+        .hero-section {
+            text-align: center;
+            padding: 60px 20px;
+            background: linear-gradient(135deg, var(--color-surface) 0%, #ffffff 100%);
+        }
+
+        .hero-title {
+            font-size: 2.5rem;
+            font-weight: 600;
+            color: var(--color-primary);
+            margin-bottom: 20px;
+        }
+
+        .hero-subtitle {
+            font-size: 1.2rem;
+            font-weight: 300;
+            color: var(--color-text);
+            max-width: 700px;
+            margin: 0 auto 40px;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .benefit-item {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .benefit-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .benefit-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--color-primary);
+            margin-bottom: 10px;
+        }
+
+        .benefit-text {
+            font-size: 0.9rem;
+            color: var(--color-text);
+        }
+
+        /* --- VIDEO GALERIE --- */
+        .solutions-section {
+            padding: 80px 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.2rem;
+            font-weight: 600;
+            color: var(--color-primary);
+            margin-bottom: 20px;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.1rem;
+            color: var(--color-text);
+            max-width: 600px;
+            margin: 0 auto 60px;
+        }
+
+        .video-gallery {
+            display: grid;
+            gap: 60px;
+        }
+
+        .video-section {
+            background-color: var(--color-surface);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0;
+            align-items: center;
+        }
+
+        .video-section:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .video-container {
+            position: relative;
+            overflow: hidden;
+            border-radius: var(--border-radius) 0 0 var(--border-radius);
+            height: 100%;
+        }
+
+        .video-section video {
+            width: 100%;
+            height: 100%;
+            display: block;
+            object-fit: cover;
+            background-color: #e0e0e0;
+            transition: transform 0.3s ease;
+            border-radius: var(--border-radius) 0 0 var(--border-radius);
+            min-height: 300px;
+        }
+
+        .video-section:hover video {
+            transform: scale(1.02);
+        }
+
+        .video-description {
+            padding: 30px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .video-description h2 {
+            font-size: 1.8rem;
+            color: var(--color-primary);
+            margin-bottom: 15px;
+        }
+
+        .video-description p {
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .feature-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .feature-list li {
+            font-size: 0.9rem;
+            color: var(--color-text);
+            margin-bottom: 8px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .feature-list li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #28a745;
+            font-weight: 600;
+        }
+
+        /* --- PROCESS SECTION --- */
+        .process-section {
+            background-color: var(--color-surface);
+            padding: 80px 20px;
+        }
+
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
+        }
+
+        .process-step {
+            text-align: center;
+            padding: 30px 20px;
+            background: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease;
+        }
+
+        .process-step:hover {
+            transform: translateY(-5px);
+        }
+
+        .step-number {
+            background: var(--color-primary);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin: 0 auto 20px;
+        }
+
+        .step-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--color-primary);
+            margin-bottom: 15px;
+        }
+
+        .step-description {
+            color: var(--color-text);
+        }
+
+        /* --- STICKY CTA BAR --- */
+        .sticky-cta-bar {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-top: 1px solid #e9ecef;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            z-index: 1000;
+            box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .cta-button {
+            padding: 12px 24px;
+            font-size: 1rem;
+            font-weight: 600;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+        }
+
+        .cta-button.primary {
+            background-color: var(--color-primary);
+            color: var(--color-background);
+            margin-right: 10px;
+        }
+        .cta-button.primary:hover {
+            background-color: #333;
+            transform: translateY(-2px);
+        }
+
+        .cta-button.secondary {
+            background-color: transparent;
+            color: var(--color-primary);
+            border: 1px solid #ccc;
+        }
+        .cta-button.secondary:hover {
+            background-color: var(--color-surface);
+            border-color: var(--color-primary);
+        }
+
+        /* --- RESPONSIVE DESIGN --- */
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1rem;
+            }
+            
+            .sticky-cta-bar {
+                flex-direction: column;
+                gap: 10px;
+                padding: 12px 15px;
+            }
+            
+            .cta-button {
+                width: 100%;
+                max-width: 300px;
+            }
+
+            .benefits-grid {
+                display: none;
+            }
+
+            .process-section {
+                display: none;
+            }
+
+            .video-section {
+                grid-template-columns: 1fr;
+                gap: 0;
+            }
+
+            .video-container {
+                border-radius: var(--border-radius) var(--border-radius) 0 0;
+            }
+
+            .video-section video {
+                border-radius: var(--border-radius) var(--border-radius) 0 0;
+                aspect-ratio: 16 / 9;
+                min-height: auto;
+                height: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header class="page-header">
+        <a href="index.html" class="back-link">← Zurück zur Übersicht</a>
+        <div class="logo">IAS</div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero-section container">
+        <h1 class="hero-title">Raumteiler-Lösungen</h1>
+        <p class="hero-subtitle">Zonieren Sie offene Räume mit Stil – unsere Glas- und Stahllösungen schaffen fließende Übergänge ohne Verlust von Licht und Weitläufigkeit.</p>
+        
+        <div class="benefits-grid">
+            <div class="benefit-item">
+                <span class="benefit-icon">🌟</span>
+                <h3 class="benefit-title">Lichtdurchlässig</h3>
+                <p class="benefit-text">Zonierung ohne Lichtverlust</p>
+            </div>
+            <div class="benefit-item">
+                <span class="benefit-icon">🏗️</span>
+                <h3 class="benefit-title">Flexibel</h3>
+                <p class="benefit-text">Anpassbar an jeden Raumzuschnitt</p>
+            </div>
+            <div class="benefit-item">
+                <span class="benefit-icon">🎨</span>
+                <h3 class="benefit-title">Architektonisch</h3>
+                <p class="benefit-text">Designelement mit Funktion</p>
+            </div>
+            <div class="benefit-item">
+                <span class="benefit-icon">🔧</span>
+                <h3 class="benefit-title">Dauerhaft</h3>
+                <p class="benefit-text">Hochwertige Materialien und Verarbeitung</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- LÖSUNGEN SECTION -->
+    <section class="solutions-section container">
+        <h2 class="section-title">Unsere Raumteiler-Konzepte</h2>
+        <p class="section-subtitle">Entdecken Sie verschiedene Möglichkeiten der stilvollen Raumzonierung</p>
+
+        <div class="video-gallery">
+            <!-- LÖSUNG 1: Feststehende Glaswände -->
+            <article class="video-section">
+                <div class="video-container">
+                    <video class="scroll-video" muted loop playsinline autoplay src="https://assets.mixkit.co/videos/preview/mixkit-modern-glass-and-wood-house-in-the-forest-5489-large.mp4"></video>
+                </div>
+                <div class="video-description">
+                    <h2>Feststehende Glaswände</h2>
+                    <p>Elegante Festverglasungen schaffen klare Zonen, während sie den Raum optisch verbunden halten. Perfekt für die Abtrennung von Wohn- und Essbereichen.</p>
+                    <ul class="feature-list">
+                        <li>Maximale Lichttransmission</li>
+                        <li>Verschiedene Glasarten verfügbar</li>
+                        <li>Integrierbare LED-Beleuchtung</li>
+                        <li>Rahmenlos oder mit Stahlrahmen</li>
+                    </ul>
+                </div>
+            </article>
+
+            <!-- LÖSUNG 2: Mobile Raumteiler -->
+            <article class="video-section">
+                <div class="video-container">
+                    <video class="scroll-video" muted loop playsinline autoplay src="attached_assets/video-schiebetuer.mp4"></video>
+                </div>
+                <div class="video-description">
+                    <h2>Mobile Raumteiler</h2>
+                    <p>Flexible Schiebewände ermöglichen es, Räume je nach Bedarf zu öffnen oder zu schließen. Ideal für wandelbare Wohnkonzepte und Bürolandschaften.</p>
+                    <ul class="feature-list">
+                        <li>Flexibel verschiebbar</li>
+                        <li>Verschiedene Betriebsarten</li>
+                        <li>Kompakte Verstauung möglich</li>
+                        <li>Akustische Optimierung verfügbar</li>
+                    </ul>
+                </div>
+            </article>
+
+            <!-- LÖSUNG 3: Halbhohe Raumteiler -->
+            <article class="video-section">
+                <div class="video-container">
+                    <video class="scroll-video" muted loop playsinline autoplay src="https://assets.mixkit.co/videos/preview/mixkit-sliding-glass-door-of-a-modern-house-5487-large.mp4"></video>
+                </div>
+                <div class="video-description">
+                    <h2>Halbhohe Raumteiler</h2>
+                    <p>Subtile Zonierung mit halbhohen Glaswänden – sie definieren Bereiche, ohne den Raum zu teilen. Perfekt für offene Küchen und Arbeitsbereiche.</p>
+                    <ul class="feature-list">
+                        <li>Dezente Raumtrennung</li>
+                        <li>Erhaltung der Raumhöhe</li>
+                        <li>Vielseitige Höhenvarianten</li>
+                        <li>Kombinierbar mit Regalsystemen</li>
+                    </ul>
+                </div>
+            </article>
+
+            <!-- LÖSUNG 4: Durchgangs-Raumteiler -->
+            <article class="video-section">
+                <div class="video-container">
+                    <video class="scroll-video" muted loop playsinline autoplay src="https://assets.mixkit.co/videos/preview/mixkit-modern-house-with-a-swimming-pool-5483-large.mp4"></video>
+                </div>
+                <div class="video-description">
+                    <h2>Durchgangs-Raumteiler</h2>
+                    <p>Raumteiler mit integrierten Durchgängen verbinden Funktionalität mit Design. Sie schaffen Zonen, lassen aber natürliche Bewegungsflüsse zu.</p>
+                    <ul class="feature-list">
+                        <li>Integrierte Durchgänge</li>
+                        <li>Natürliche Wegeführung</li>
+                        <li>Architektonisches Statement</li>
+                        <li>Individuell planbare Öffnungen</li>
+                    </ul>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- PROCESS SECTION -->
+    <section class="process-section">
+        <div class="container">
+            <h2 class="section-title">Von der Idee zur perfekten Raumteilung</h2>
+            <p class="section-subtitle">Wir begleiten Sie vom ersten Entwurf bis zur finalen Installation</p>
+            
+            <div class="process-grid">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <h3 class="step-title">Raumanalyse</h3>
+                    <p class="step-description">Gemeinsame Bewertung Ihrer räumlichen Gegebenheiten und Anforderungen</p>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <h3 class="step-title">Konzeptentwicklung</h3>
+                    <p class="step-description">Entwicklung maßgeschneiderter Lösungen mit 3D-Visualisierung</p>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <h3 class="step-title">Präzisionsfertigung</h3>
+                    <p class="step-description">Millimetergenaue Umsetzung in unserer eigenen Werkstatt</p>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <h3 class="step-title">Profi-Montage</h3>
+                    <p class="step-description">Saubere Installation durch unser erfahrenes Montage-Team</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- STICKY CTA BAR -->
+    <footer class="sticky-cta-bar">
+        <a href="mailto:beratung@ias-glas.de?subject=Beratungsanfrage%20für%20Raumteiler-Lösung" class="cta-button primary">Kostenlose Beratung anfragen</a>
+        <a href="3d-modelle.html" class="cta-button secondary">3D-Modelle entdecken</a>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Autoplay für Videos beim Scrollen
+            const videos = document.querySelectorAll('.scroll-video');
+
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.3
+            };
+
+            const videoObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    const video = entry.target;
+
+                    if (entry.isIntersecting) {
+                        video.play().catch(error => {
+                            // Fehler beim Autoplay ignorieren
+                        });
+                    } else {
+                        video.pause();
+                    }
+                });
+            }, observerOptions);
+
+            videos.forEach(video => {
+                videoObserver.observe(video);
+                // Versuche sofort abzuspielen
+                video.play().catch(error => {
+                    // Fehler beim Autoplay ignorieren
+                });
+            });
+        });
+
+        // Smooth Scroll für interne Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
