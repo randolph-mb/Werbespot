@@ -44,26 +44,32 @@
     <section class="models-section container">
         <div class="models-grid">
             
-            <!-- MODELL 1: Schwarzer Stahlrahmen -->
+            <!-- MODELL 1: Doppelflügelrahmen -->
             <article class="model-card" data-category="rahmen">
-                <div class="model-viewer" onclick="alert('3D-Viewer öffnet in Kürze - Schwarzer Stahlrahmen')">
-                    <div class="model-placeholder">
-                        <span class="model-icon">🔲</span>
-                        <span class="model-status">3D-Modell laden</span>
-                    </div>
+                <div class="model-viewer">
+                    <model-viewer 
+                        src="attached_assets/Doppelflügelrahmen_1752135029565.glb"
+                        alt="Doppelflügelrahmen aus schwarzem Stahl"
+                        auto-rotate 
+                        camera-controls 
+                        shadow-intensity="1"
+                        style="width: 100%; height: 100%;"
+                        loading="eager"
+                        reveal="auto">
+                    </model-viewer>
                 </div>
                 <div class="model-info">
-                    <h3 class="model-title">Schwarzer Stahlrahmen</h3>
-                    <p class="model-description">Minimalistischer Loft-Style Rahmen aus mattschwarzem Stahl. Rechteckige Form mit klaren Linien.</p>
+                    <h3 class="model-title">Doppelflügelrahmen</h3>
+                    <p class="model-description">Eleganter Doppelflügelrahmen aus mattschwarzem Stahl. Zwei symmetrische Flügel ermöglichen eine großzügige Öffnung und architektonische Präsenz.</p>
                     <ul class="model-specs">
                         <li>Material: Pulverbeschichteter Stahl</li>
                         <li>Farbe: Mattschwarz RAL 9005</li>
-                        <li>Verschiedene Größen verfügbar</li>
+                        <li>Doppelflügel-Konstruktion</li>
                         <li>Wandstärke: 3mm</li>
                     </ul>
                     <div class="model-actions">
-                        <button class="model-button primary">360° Ansicht</button>
-                        <button class="model-button secondary">Technische Daten</button>
+                        <button class="model-button primary" onclick="document.querySelectorAll('model-viewer')[0].cameraOrbit = '0deg 75deg 2m'">Nahansicht</button>
+                        <button class="model-button secondary" onclick="document.querySelectorAll('model-viewer')[0].cameraOrbit = '45deg 55deg 4m'">Übersicht</button>
                     </div>
                 </div>
             </article>
