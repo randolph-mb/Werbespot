@@ -765,6 +765,37 @@ model-viewer {
     }
 }
 
+/* --- IMPRESSUM STYLES --- */
+.impressum-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+    padding: 20px;
+}
+
+.impressum-section {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: var(--color-surface);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+}
+
+.impressum-section p {
+    line-height: 1.8;
+    margin-bottom: 0;
+}
+
+.impressum-section a {
+    color: var(--color-primary);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.impressum-section a:hover {
+    text-decoration: underline;
+}
+
 /* --- RESPONSIVE DESIGN --- */
 @media (max-width: 768px) {
     .hero-title {
