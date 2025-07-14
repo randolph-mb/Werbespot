@@ -176,6 +176,109 @@ body {
     font-weight: 600;
 }
 
+/* --- SICHTBARER FOOTER --- */
+.visible-footer {
+    background-color: #f8f9fa;
+    border-top: 2px solid #e9ecef;
+    padding: 40px 0;
+    margin-top: 60px;
+    margin-bottom: 80px; /* Platz für die Sticky CTA Bar */
+}
+
+.footer-content-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 40px;
+    align-items: start;
+}
+
+.company-section {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.company-logo {
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--color-primary);
+    letter-spacing: 2px;
+}
+
+.company-details {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--color-text);
+}
+
+.company-details a {
+    color: var(--color-primary);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.company-details a:hover {
+    text-decoration: underline;
+}
+
+.legal-links-section h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--color-primary);
+    margin-bottom: 15px;
+}
+
+.legal-links {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.legal-link {
+    display: inline-block;
+    padding: 12px 20px;
+    background-color: white;
+    border: 2px solid var(--color-primary);
+    border-radius: 6px;
+    color: var(--color-primary);
+    text-decoration: none;
+    font-weight: 600;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.legal-link:hover {
+    background-color: var(--color-primary);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 768px) {
+    .footer-content-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        text-align: center;
+    }
+    
+    .company-section {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .legal-links {
+        flex-direction: row;
+        justify-content: center;
+        gap: 15px;
+    }
+    
+    .legal-link {
+        flex: 1;
+        max-width: 150px;
+    }
+}
+
 /* --- MODAL / OVERLAY --- */
 .modal-overlay {
     position: fixed;
