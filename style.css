@@ -176,6 +176,58 @@ body {
     font-weight: 600;
 }
 
+/* --- PAGE FOOTER --- */
+.page-footer {
+    background-color: #f8f9fa;
+    padding: 30px 0;
+    margin-top: 50px;
+    border-top: 1px solid #e0e0e0;
+}
+
+.page-footer .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.page-footer .company-info {
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+.page-footer .footer-links {
+    display: flex;
+    gap: 20px;
+}
+
+.page-footer .footer-links a {
+    color: var(--color-primary);
+    text-decoration: none;
+    font-weight: 600;
+    padding: 8px 16px;
+    border: 1px solid var(--color-primary);
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.page-footer .footer-links a:hover {
+    background-color: var(--color-primary);
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .page-footer .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .page-footer .footer-links {
+        justify-content: center;
+    }
+}
+
 /* --- MODAL / OVERLAY --- */
 .modal-overlay {
     position: fixed;
