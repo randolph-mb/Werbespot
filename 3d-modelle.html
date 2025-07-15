@@ -519,19 +519,18 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
+            // ----------- IHR VORHANDENER CODE -----------
             // Kategorie-Filter Funktionalität
             const filterButtons = document.querySelectorAll('.category-filter');
             const modelCards = document.querySelectorAll('.model-card');
 
             filterButtons.forEach(button => {
                 button.addEventListener('click', () => {
-                    // Aktiven Button aktualisieren
                     filterButtons.forEach(btn => btn.classList.remove('active'));
                     button.classList.add('active');
 
                     const selectedCategory = button.dataset.category;
 
-                    // Karten filtern
                     modelCards.forEach(card => {
                         if (selectedCategory === 'all' || card.dataset.category === selectedCategory) {
                             card.classList.remove('hidden');
@@ -553,6 +552,28 @@
                             block: 'start'
                         });
                     }
+                });
+            });
+
+            // ----------- NEUER CODE ZUR LÖSUNG IHRES PROBLEMS -----------
+            // Verhindert das Scrollen der Seite, während das 3D-Modell bedient wird.
+            const modelViewers = document.querySelectorAll('model-viewer');
+
+            modelViewers.forEach(viewer => {
+                // Für mobile Geräte (Touch-Events)
+                viewer.addEventListener('touchstart', () => {
+                    document.body.style.overflow = 'hidden';
+                });
+                viewer.addEventListener('touchend', () => {
+                    document.body.style.overflow = 'auto';
+                });
+
+                // Für Desktop-Geräte (Maus-Events)
+                viewer.addEventListener('mouseenter', () => {
+                    document.body.style.overflow = 'hidden';
+                });
+                viewer.addEventListener('mouseleave', () => {
+                    document.body.style.overflow = 'auto';
                 });
             });
         });
