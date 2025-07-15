@@ -576,6 +576,27 @@
                     document.body.style.overflow = 'auto';
                 });
             });
+
+            // ----------- MOBILE STICKY CTA BAR HIDE/SHOW -----------
+            // Nur auf mobilen Geräten aktivieren
+            if (window.innerWidth <= 768) {
+                let lastScrollTop = 0;
+                const stickyBar = document.querySelector('.sticky-cta-bar');
+                
+                window.addEventListener('scroll', () => {
+                    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                    
+                    if (scrollTop > lastScrollTop && scrollTop > 100) {
+                        // Scrollen nach unten - CTA Bar verstecken
+                        stickyBar.classList.add('hidden');
+                    } else if (scrollTop < lastScrollTop) {
+                        // Scrollen nach oben - CTA Bar zeigen
+                        stickyBar.classList.remove('hidden');
+                    }
+                    
+                    lastScrollTop = scrollTop;
+                });
+            }
         });
     </script>
 

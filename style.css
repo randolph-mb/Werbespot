@@ -593,6 +593,13 @@ body {
     gap: 15px;
     z-index: 1000;
     box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.03);
+    transform: translateY(0);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Versteckte Sticky CTA Bar (nur auf mobilen Geräten) */
+.sticky-cta-bar.hidden {
+    transform: translateY(100%);
 }
 
 .cta-button {
