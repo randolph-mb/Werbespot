@@ -1,0 +1,86 @@
+1. Verantwortlicher
+Verantwortlich für die Datenverarbeitung auf dieser Website ist:
+
+IAS Innen Ausbau Service GmbH
+Grevenweg 89
+20537 Hamburg
+Telefon: +49 (0) 40 2263 61570
+E-Mail: info@ias-hh.de
+
+2. Zugriffsdaten / Server-Logfiles
+Beim Besuch dieser Website übermittelt Ihr Browser automatisch Daten an unseren Webserver. Zu diesen Zugriffsdaten gehören:
+
+IP-Adresse des anfragenden Geräts
+
+Datum und Uhrzeit des Zugriffs
+
+aufgerufene Seite bzw. Datei
+
+übertragene Datenmenge
+
+Meldung über erfolgreichen Abruf
+
+Browsertyp und -version
+
+Betriebssystem des Nutzers
+
+Referrer-URL (die zuvor besuchte Seite)
+
+Diese Daten dienen ausschließlich der technischen Bereitstellung und Sicherheit der Website.
+Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse).
+Eine Zusammenführung mit anderen Datenquellen findet nicht statt. Die Daten werden nach 7 Tagen automatisch gelöscht.
+
+3. Hosting durch IONOS
+Unsere Website wird bei der IONOS SE, Elgendorfer Straße 57, 56410 Montabaur, gehostet.
+IONOS speichert personenbezogene Daten (z. B. IP-Adressen) auf Grundlage eines Vertrags zur Auftragsverarbeitung (AVV) gemäß Art. 28 DSGVO.
+
+Die Verarbeitung der Daten erfolgt ausschließlich nach unserer Weisung und dient der sicheren und effizienten Bereitstellung unseres Online-Angebots.
+
+Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an zuverlässiger Websitebereitstellung).
+
+Weitere Informationen:
+🔗 https://www.ionos.de/terms-gtc/terms-privacy
+
+4. Lokale Medieninhalte (Videos, 3D-Modelle)
+Alle multimedialen Inhalte wie Videos, 3D-Modelle oder interaktive Darstellungen werden auf unserem eigenen Server gespeichert und bereitgestellt.
+Es erfolgt keine Verbindung zu externen Plattformen oder Drittanbietern beim Laden dieser Inhalte.
+Ihre Daten werden dabei nicht an Dritte übermittelt.
+
+5. Schriftarten (lokale Einbindung von Google Fonts)
+Zur einheitlichen Darstellung von Schriftarten verwenden wir lokal eingebundene Schriftarten der Familie Poppins, die ursprünglich von Google Fonts stammen.
+Die Schriftdateien werden von unserem eigenen Webserver geladen. Es erfolgt keine Verbindung zu Servern von Google, und es werden keine personenbezogenen Daten an Google übermittelt.
+
+Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an einer ansprechenden Darstellung unserer Website).
+
+6. Ihre Rechte
+Sie haben das Recht:
+
+auf Auskunft über Ihre bei uns gespeicherten personenbezogenen Daten (Art. 15 DSGVO),
+
+auf Berichtigung unrichtiger Daten (Art. 16 DSGVO),
+
+auf Löschung (Art. 17 DSGVO),
+
+auf Einschränkung der Verarbeitung (Art. 18 DSGVO),
+
+auf Datenübertragbarkeit (Art. 20 DSGVO),
+
+sowie auf Widerspruch gegen bestimmte Datenverarbeitungen (Art. 21 DSGVO).
+
+Sofern die Verarbeitung auf Ihrer Einwilligung beruht (Art. 6 Abs. 1 lit. a DSGVO), haben Sie zudem das Recht, diese Einwilligung jederzeit mit Wirkung für die Zukunft zu widerrufen.
+
+Sie haben zudem das Recht auf Beschwerde bei einer Aufsichtsbehörde.
+
+Zuständige Behörde ist:
+
+Der Hamburgische Beauftragte für Datenschutz und Informationsfreiheit
+Ludwig-Erhard-Str. 22
+20459 Hamburg
+Telefon: +49 (0) 40 42854-4040
+E-Mail: mailbox@datenschutz.hamburg.de
+Website: https://datenschutz-hamburg.de
+
+7. Kontakt
+Bei Fragen zum Datenschutz oder zur Ausübung Ihrer Rechte wenden Sie sich bitte an:
+
+📧 E-Mail: info@ias-hh.de
